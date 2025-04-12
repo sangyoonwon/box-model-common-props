@@ -433,7 +433,11 @@ footer{
         - add the small filter drop shadow from the CSS variables in the root
 */
 #section3 img{
-    
+    display: block;
+    width: 200px
+    height auto;
+    margin: 0 auto;
+    filter: var(--filter-shadow-sm);
 }
 
 #section3 div::before{
@@ -475,6 +479,16 @@ footer{
         - move this to the right from its original location by 25px
 */
 #section3 div::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--lt-blue);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    top: -50px;
+    left: 25px;
 }
 
 
@@ -495,7 +509,8 @@ footer{
             - bottom: 1rem
             - left: 0
 */
-#section4 p:last-of-type{
+#section4 p:last-of-type{ 
+    margin: 1rem 0;
 
 }
 
@@ -533,7 +548,7 @@ footer{
         - add the puppy-photo as a repeating background to the container
 */
 #bg-img-3{
-    
+    background: var(--lt-blue) center url("images/puppy-photo.jpg");
 }
 
 /* For the fourth div, let's style this like the second div, but let's change the height of the div to 100px, so it fits the height of the image. It will make it look like the image and div are the same height */
@@ -560,7 +575,7 @@ footer{
         - add the wood background texture from the images folder
 */
 #pattern1{
-    
+    background: var(--light-gray) 110% url(images/wood.png);
 }
 
 /* For the second div, the pattern is from from Hero Pattern. These actually give you SVG code to paste into your CSS */
@@ -617,7 +632,7 @@ footer{
         - float the image to the right
 */
 #dog-house{
-    
+    float: right;
 }
 
 /* When you use floats, you have to be sure to clear them so that the rest of your page after the floats displays normally. Let's use the display section to clear the floats (because it is the next tag outside of our container in the HTML) */
@@ -626,7 +641,7 @@ footer{
         - clear any floats
 */
 #section9{
-    
+    clear: both;
 }
 
 /* ------------- SECTION 9 STYLES ---------------- */
